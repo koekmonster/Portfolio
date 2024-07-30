@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Web Design Mastery | Responsive Portfolio</title>
+  <style>
+    :root {
+      --nav-height: 80px; /* Adjust based on your nav bar height */
+      --primary-color: #007bff; /* Primary blue color */
+      --secondary-color: #0056b3; /* Darker blue color for hover */
+    }
+
+    body {
+      scroll-padding-top: var(--nav-height);
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Additional styles */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background-color: white;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .nav__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .checkbox {
+      display: none;
+    }
+
+    .action__btns a {
+      margin-right: 10px;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none; /* Remove underline from anchor tag */
+      font-weight: bold; /* Keep font styling consistent */
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+      color: #ffffff; /* Default text color */
+      background-color: var(--primary-color); /* Default background color */
+    }
+
+    .action__btns a:hover {
+      background-color: var(--secondary-color); /* Darker blue on hover */
+    }
+
+    /* Example styles for other sections */
+    .section {
+      padding: 4rem 2rem;
+      background-color: #f9f9f9; /* Light background for sections */
+    }
+
+    .section__container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .title, .subtitle {
+      margin: 0;
+    }
+
+    .title {
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: gray;
+    }
+
+    .description {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      margin: 1rem 0;
+      line-height: 1.6;
+    }
+
+    /* Contact Section Styles */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-info a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+      color: var(--secondary-color);
+    }
+
+    .contact-info i {
+      font-size: 1.2rem;
+    }
+
+    .contact-info p {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .contact-info strong {
+      font-weight: bold;
+    }
+
+    /* Projects Section Styles */
+    .projects-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .projects-text h3 {
+      margin-top: 1.5rem;
+    }
+
+    .projects-text ul {
+      margin: 0;
+      padding-left: 1.5rem;
+      list-style-type: disc;
+    }
+
+    .projects-text li {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="#">Stefan Koekemoer</a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" />
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <div class="section__container">
+      <div class="content">
+        <p class="subtitle">HELLO</p>
+        <h1 class="title">
+          I'm <span>Stefan Koekemoer<br />a</span> Web Developer
+        </h1>
+        <p class="description">
+          Welcome to my web developer portfolio! I'm Stefan Koekemoer, a skilled and
+          creative web developer with a passion for creating beautiful,
+          responsive, and user-friendly websites.
+        </p>
+        <div class="action__btns">
+          <a href="https://koekmonster.github.io/Virtual-CV/" class="portfolio">Resume</a>
+        </div>
+      </div>
+      <div class="image">
+        <img src="Stefan.jpg" alt="profile" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="section__container">
+      <h2>About Me</h2>
+      <div class="about-text">
+        <p>To whom it may concern,</p>
+        <p>
+          I love exercising in the gym, doing cross-fit, and playing sports such as Rugby. My life so far has been balanced between my exercise and other responsibilities like University, Family, and Friends. I am a person with integrity and have been brought up with discipline. Without discipline, life and responsibilities will be in chaos. Involvement in Cultural activities is important and gives me a better sense of who I am. I have great communication skills and I am fluent in English and Afrikaans. I am an ambitious and focused individual. I am able to use my own initiative to get things done and I am comfortable working in a busy environment. I am career-minded and willing to work hard to get promoted and be noticed by superiors. I also believe in five core values: Honesty, Integrity, Courage, Self-Discipline, Commitment, and Respect.
+        </p>
+        <p>Yours sincerely,</p>
+        <p>Stefan Koekemoer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="section__container">
+      <h2>Projects</h2>
+      <div class="projects-text">
+        <p>
+          In 2024, I had the privilege of leading a team for the Networking module Semester Project, CMPG 315. Despite initial challenges, our project achieved a perfect score. We developed an HMS (Human Movement Sciences) Data Platform with several key features and functionalities.
+        </p>
+        
+        <h3>Project Overview</h3>
+        <p>
+          The HMS Data Platform includes large file storage, video streaming, access controls, user isolation, and video compression. It provides a secure and efficient environment for managing assignments and feedback.
+        </p>
+
+        <h3>Key Features</h3>
+        <ul>
+          <li>Secure Login</li>
+          <li>Create, Edit, and View Assignments</li>
+          <li>Compress and Upload Videos for Submissions</li>
+          <li>View Submissions</li>
+          <li>Stream Videos</li>
+          <li>Provide & View Feedback on Videos</li>
+          <li>Download Feedback & Marks in CSV/XLSX</li>
+          <li>Large File Storage</li>
+          <li>User Administration</li>
+        </ul>
+
+        <h3>Supported Environments</h3>
+        <ul>
+          <li>Mobile Applications</li>
+          <li>Desktop Optimized Web Application</li>
+        </ul>
+
+        <h3>User Roles</h3>
+        <ul>
+          <li><strong>Administrator:</strong> Unrestricted System Access</li>
+          <li><strong>Lecturer:</strong> Create Assignments, View Submissions, Stream Videos, Provide Feedback</li>
+          <li><strong>Student:</strong> View Assignments, Make Submissions, View Feedback</li>
+        </ul>
+
+        <h3>Impact</h3>
+        <p>
+          The platform is designed to enhance customer satisfaction by providing a comprehensive solution for managing educational content and feedback in a secure and user-friendly manner.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="section__container contact-info">
+      <h2><u>Contact</u></h2>
+      <p>Check out my project on GitHub:</p>
+      <a href="https://github.com/koekmonster/Virtual-CV" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i> Virtual-CV Repository
+      </a>
+      <p><strong>PHONE:</strong> <i class="fas fa-phone"></i> 071 706 3249</p>
+      <p><strong>EMAIL:</strong> <a href="mailto:stefankoekies@gmail.com"><i class="fas fa-envelope"></i> stefankoekies@gmail.com</a></p>
+      <p><strong>Connect with me on:</strong> <a href="https://www.linkedin.com/in/stefan-koekemoer-3979a22b5" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+      <p><strong>DRIVING LICENSE:</strong> <i class="fas fa-id-card"></i> Code 2(B)</p>
+    </div>
+  </section>
+</body>
+</html>
