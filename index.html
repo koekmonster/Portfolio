@@ -197,14 +197,16 @@
       color: var(--text-dark);
     }
 
-    .projects-text ul {
-      margin: 0;
-      padding-left: 1.5rem;
-      list-style-type: disc;
+    .projects-text .feature-list,
+    .projects-text .environment-list,
+    .projects-text .roles-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
     }
 
-    .projects-text li {
-      margin: 0.5rem 0;
+    .projects-text p {
+      margin: 0;
       font-size: 1.1rem;
       line-height: 1.6;
     }
@@ -319,30 +321,30 @@
         </p>
 
         <h3>Key Features</h3>
-        <ul>
-          <li>Secure Login</li>
-          <li>Create, Edit, and View Assignments</li>
-          <li>Compress and Upload Videos for Submissions</li>
-          <li>View Submissions</li>
-          <li>Stream Videos</li>
-          <li>Provide & View Feedback on Videos</li>
-          <li>Download Feedback & Marks in CSV/XLSX</li>
-          <li>Large File Storage</li>
-          <li>User Administration</li>
-        </ul>
+        <div class="feature-list">
+          <p>Secure Login</p>
+          <p>Create, Edit, and View Assignments</p>
+          <p>Compress and Upload Videos for Submissions</p>
+          <p>View Submissions</p>
+          <p>Stream Videos</p>
+          <p>Provide & View Feedback on Videos</p>
+          <p>Download Feedback & Marks in CSV/XLSX</p>
+          <p>Large File Storage</p>
+          <p>User Administration</p>
+        </div>
 
         <h3>Supported Environments</h3>
-        <ul>
-          <li>Mobile Applications</li>
-          <li>Desktop Optimized Web Application</li>
-        </ul>
+        <div class="environment-list">
+          <p>Mobile Applications</p>
+          <p>Desktop Optimized Web Application</p>
+        </div>
 
         <h3>User Roles</h3>
-        <ul>
-          <li><strong>Administrator:</strong> Unrestricted System Access</li>
-          <li><strong>Lecturer:</strong> Create Assignments, View Submissions, Stream Videos, Provide Feedback</li>
-          <li><strong>Student:</strong> View Assignments, Make Submissions, View Feedback</li>
-        </ul>
+        <div class="roles-list">
+          <p><strong>Administrator:</strong> Unrestricted System Access</p>
+          <p><strong>Lecturer:</strong> Create Assignments, View Submissions, Stream Videos, Provide Feedback</p>
+          <p><strong>Student:</strong> View Assignments, Make Submissions, View Feedback</p>
+        </div>
 
         <h3>Impact</h3>
         <p>
