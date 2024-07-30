@@ -38,20 +38,15 @@
       background-color: #fff;
       z-index: 1000;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 1rem;
-      height: var(--nav-height);
     }
 
     .nav__content {
       max-width: var(--max-width);
       margin: auto;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 100%;
     }
 
     .nav__content .logo a {
@@ -89,51 +84,21 @@
       display: none;
     }
 
-    .menu-icon {
-      display: none;
-      font-size: 2rem;
-      color: var(--primary-color);
+    .action__btns a {
+      margin-right: 10px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
       cursor: pointer;
-      padding: 0.5rem;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 500;
+      color: #fff;
+      background-color: var(--primary-color);
+      transition: background-color 0.3s, color 0.3s;
     }
 
-    .menu-icon:hover {
-      color: var(--primary-color-dark);
-    }
-
-    .nav__content ul {
-      display: flex;
-    }
-
-    .checkbox:checked ~ .nav__content ul {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: var(--nav-height);
-      left: 0;
-      right: 0;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
-      margin: 0;
-    }
-
-    .checkbox:checked ~ .nav__content ul li {
-      margin: 0.5rem 0;
-    }
-
-    .checkbox:checked ~ .nav__content ul li a {
-      color: var(--text-dark);
-    }
-
-    @media (max-width: 750px) {
-      .nav__content ul {
-        display: none;
-      }
-
-      .menu-icon {
-        display: block;
-      }
+    .action__btns a:hover {
+      background-color: var(--primary-color-dark);
     }
 
     .section {
@@ -247,6 +212,30 @@
     }
 
     @media (max-width: 750px) {
+      .nav__content ul {
+        display: none;
+      }
+
+      .checkbox {
+        display: block;
+        font-size: 2rem;
+        color: var(--primary-color);
+        cursor: pointer;
+      }
+
+      .checkbox:checked + ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
       .section__container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -266,10 +255,10 @@
   <nav>
     <div class="nav__content">
       <div class="logo"><a href="#">Stefan Koekemoer</a></div>
-      <label for="check" class="menu-icon">
+      <label for="check" class="checkbox">
         <i class="ri-menu-line"></i>
       </label>
-      <input type="checkbox" name="check" id="check" class="checkbox" />
+      <input type="checkbox" name="check" id="check" />
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -305,16 +294,11 @@
   <!-- About Section -->
   <section id="about" class="section">
     <div class="section__container">
+      <h2>About Me</h2>
       <div class="about-text">
-        <h2>About Me</h2>
+        <p>To whom it may concern,</p>
         <p>
-          I am an ambitious and focused individual with a passion for technology and continuous learning.
-          I believe that without discipline, life and responsibilities will be in chaos. Involvement in
-          cultural activities is important and gives me a better sense of who I am. I have great
-          communication skills and I am fluent in English and Afrikaans. I am comfortable working in a
-          busy environment and use my own initiative to get things done. I am career-minded and willing
-          to work hard to get promoted and noticed by superiors. I also believe in five core values:
-          Honesty, Integrity, Courage, Self-Discipline, Commitment, and Respect.
+          I love exercising in the gym, doing cross-fit, and playing sports such as Rugby. My life so far has been balanced between my exercise and other responsibilities like University, Family, and Friends. I am a person with integrity and have been brought up with discipline. Without discipline, life and responsibilities will be in chaos. Involvement in Cultural activities is important and gives me a better sense of who I am. I have great communication skills and I am fluent in English and Afrikaans. I am an ambitious and focused individual. I am able to use my own initiative to get things done and I am comfortable working in a busy environment. I am career-minded and willing to work hard to get promoted and be noticed by superiors. I also believe in five core values: Honesty, Integrity, Courage, Self-Discipline, Commitment, and Respect.
         </p>
         <p>Yours sincerely,</p>
         <p>Stefan Koekemoer</p>
@@ -328,15 +312,12 @@
       <h2>Projects</h2>
       <div class="projects-text">
         <p>
-          In 2024, I had the privilege of leading a team for the Networking module Semester Project, CMPG 315.
-          Despite initial challenges, our project achieved a perfect score. We developed an HMS (Human Movement
-          Sciences) Data Platform with several key features and functionalities.
+          In 2024, I had the privilege of leading a team for the Networking module Semester Project, CMPG 315. Despite initial challenges, our project achieved a perfect score. We developed an HMS (Human Movement Sciences) Data Platform with several key features and functionalities.
         </p>
 
         <h3>Project Overview</h3>
         <p>
-          The HMS Data Platform includes large file storage, video streaming, access controls, user isolation,
-          and video compression. It provides a secure and efficient environment for managing assignments and feedback.
+          The HMS Data Platform includes large file storage, video streaming, access controls, user isolation, and video compression. It provides a secure and efficient environment for managing assignments and feedback.
         </p>
 
         <h3>Key Features</h3>
@@ -367,8 +348,7 @@
 
         <h3>Impact</h3>
         <p>
-          The platform is designed to enhance customer satisfaction by providing a comprehensive solution
-          for managing educational content and feedback in a secure and user-friendly manner.
+          The platform is designed to enhance customer satisfaction by providing a comprehensive solution for managing educational content and feedback in a secure and user-friendly manner.
         </p>
       </div>
     </div>
