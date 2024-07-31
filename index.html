@@ -40,6 +40,8 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+    
+
     .nav__content {
       max-width: var(--max-width);
       margin: auto;
@@ -371,5 +373,25 @@
       <p><strong>DRIVING LICENSE:</strong> <i class="ri-id-card-fill"></i> Code 2(B)</p>
     </div>
   </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const checkbox = document.getElementById("check");
+      const navLinks = document.querySelector("nav ul");
+
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          navLinks.style.display = "flex";
+        } else {
+          navLinks.style.display = "none";
+        }
+      });
+
+      // Optional: Close menu when clicking a link
+      navLinks.addEventListener("click", function() {
+        checkbox.checked = false;
+        navLinks.style.display = "none";
+      });
+    });
+  </script>
 </body>
 </html>
